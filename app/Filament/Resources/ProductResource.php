@@ -14,6 +14,7 @@ use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\ProductResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\ProductResource\RelationManagers;
+use App\Filament\Resources\ProductResource\RelationManagers\PhotosRelationManager;
 
 class ProductResource extends Resource
 {
@@ -84,7 +85,7 @@ class ProductResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            PhotosRelationManager::class,
         ];
     }
 
